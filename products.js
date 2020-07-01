@@ -6,15 +6,16 @@ class Products{
 
     }
 }
+
 class ProductsManagement{
     constructor(){
         this.listproducts = []
     }
     addProducts(product){
-        this.listproducts.push(product);
+        this.listproducts.push(product); //push es una funcion que me permite agragar cosas
     }
     removeProducts(product){
-        for (var i=0; i<this.listproducts.length; i++){
+        for (var i = 0; i < this.listproducts.length; i++){
             if(this.listproducts[i] == product){
                 this.listproducts.splice(i, 1);
                 return;
@@ -30,4 +31,11 @@ class ProductsManagement{
             }
         }
     }
+    //esta es una funcion para mostrar productos
+    showProducts(){
+        //esta funcion que devuelva products
+        return this.listproducts;
+    }
 }
+//Hacemos exportable este codigo de la sgte forma:
+export{Products, ProductsManagement}
